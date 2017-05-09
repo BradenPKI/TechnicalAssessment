@@ -1,7 +1,7 @@
 <div class="test02">
 	<div class="ngdialog ngdialog-theme-default col-xs-12 col-sm-8 col-md-6 col-lg-6">
 
-		<div uib-alert ng-repeat="alert in alerts" ng-class="'alert-' + (alert.type || 'warning')" close="closeAlert($index)">{{alert.msg}}</div>
+		<div uib-alert role="alert" ng-repeat="alert in alerts" ng-class="'alert-' + (alert.type || 'warning')" close="closeAlert($index)">{{alert.msg}}</div>
 
 	    <form class="future-banking">
 			
@@ -67,18 +67,18 @@
 			        		
 			        		<div class="row bg-gray">
 			        			<div class="col-xs-6">
-			        				<label id="transfer-amount">Amount to transfer:</label>
+			        				<label for="amount" id="transfer-amount">Amount to transfer:</label>
 			        			</div>
 			        			<div class="col-xs-6">
-				        			<input class="form-control" type="text" value="{{300 | currency}}">
+				        			<input id="amount" class="form-control" type="text" value="{{300 | currency}}">
 			        			</div>
 			        		</div>
 			        		<div class="row bg-gray">
 			        			<div class="col-xs-6">
-			        				<label id="transfer-frequency">Frequency:</label>
+			        				<label for="frequency" id="transfer-frequency">Frequency:</label>
 			        			</div>
 			        			<div class="col-xs-6">
-			        				<select class="form-control">
+			        				<select id="frequency" class="form-control">
 									  <option>Every day</option>
 									  <option>Weekly</option>
 									  <option>Bi-weekly</option>

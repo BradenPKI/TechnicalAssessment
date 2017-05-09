@@ -1,8 +1,16 @@
+import './app.scss';
+
 export const test01 = {
-    template: require('./app.html'),
-    controller() {
+	template: require('./app.html'),
+	controller($scope, $http, buttonService) {
+		$scope.buttons = [];
 
-        // your code here
+		function initialize() {
+			buttonService.getData().then(function (response) {
+				$scope.buttons = response.data;
+			});
+		}
 
-    }
+		initialize();
+	}
 };

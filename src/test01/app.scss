@@ -1,0 +1,30 @@
+.button-wrapper .btn {
+    margin-bottom:15px;
+}
+
+.row.extra-bottom-padding-small{
+   margin-bottom: 10px;
+}
+
+.row.extra-bottom-padding-medium{
+   margin-bottom: 25px;
+}
+
+.btn-default, .btn-default:hover{
+    font-size: 16px;
+    line-height: 1.7;
+    color: #008a00;
+    border-color: #008a00;
+  word-break: break-all;
+  white-space: normal;
+}
+
+a, a:focus, a:hover{
+    color: #008a00;
+}
+
+.form-actions {
+    margin: 0;
+    background-color: transparent;
+    text-align: center;
+}
