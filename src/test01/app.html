@@ -1,3 +1,39 @@
 <div class="container">
-Your code here, see desktop/tablet/mobile.png.
+
+	<div class="row extra-bottom-padding-small">
+		<h2 class="text-center">Book an Appointment</h2>
+		<h5 class="text-center">Our Investing Topics</h5>
+	</div>
+
+	<div class="row extra-bottom-padding-medium">
+		<h4 class="text-center">Pick a topic, then we'll find a time and place</h4>
+	</div>
+
+	<div ng-if="buttons.length!=5 && buttons.length!=1" class="row extra-bottom-padding-medium" ng-all-same-height target-element="button">
+		<div ng-repeat="item in buttons" class="col-md-6 button-wrapper">
+			<button type="button" class="btn btn-default btn-block">{{ item.text | translate }}</button>
+		</div>
+	</div>
+
+	<div ng-if="buttons.length==1" class="row extra-bottom-padding-medium">
+		<div ng-repeat="item in buttons" class="col-md-12 button-wrapper">
+			<div class="col-md-offset-3 col-md-6">
+				<button type="button" class="btn btn-default btn-block">{{ item.text | translate }}</button>
+			</div>
+		</div>
+	</div>
+
+	<div ng-if="buttons.length==5" class="row extra-bottom-padding-medium" ng-all-same-height target-element="button">
+		<div ng-repeat="item in buttons">
+			<div class="row">
+				<div class="col-md-6 button-wrapper">
+					<button type="button" class="btn btn-default btn-block">{{ item.text | translate }}</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row extra-bottom-padding-medium" style="text-align:center">
+		<a class="text-center" href="javascript:history.go(-1)">&lt; Return to previous screen</a>
+	</div>
 </div>
