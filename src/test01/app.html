@@ -10,8 +10,10 @@
 	</div>
 
 	<div ng-if="buttons.length!=5 && buttons.length!=1" class="row extra-bottom-padding-medium" ng-all-same-height target-element="button">
-		<div ng-repeat="item in buttons" class="col-md-6 button-wrapper">
-			<button type="button" class="btn btn-default btn-block">{{ item.text | translate }}</button>
+		<div class="col-md-offset-2 col-md-8">
+			<div ng-repeat="item in buttons" class="col-md-6 button-wrapper">
+				<button type="button" class="btn btn-default btn-block">{{ item.text | translate }}</button>
+			</div>
 		</div>
 	</div>
 
@@ -24,8 +26,8 @@
 	</div>
 
 	<div ng-if="buttons.length==5" class="row extra-bottom-padding-medium" ng-all-same-height target-element="button">
-		<div ng-repeat="item in buttons">
-			<div class="row">
+		<div class="col-md-offset-2 col-md-8">
+			<div ng-repeat="item in buttons" class="row">
 				<div class="col-md-6 button-wrapper">
 					<button type="button" class="btn btn-default btn-block">{{ item.text | translate }}</button>
 				</div>
